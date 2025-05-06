@@ -1,5 +1,8 @@
 package com.example;
 
+/**
+ * 移动零
+ */
 public class L283MoveZeroes {
 
     public void moveZeroes(int[] nums) {
