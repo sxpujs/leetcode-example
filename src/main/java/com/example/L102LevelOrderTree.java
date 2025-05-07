@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class LevelOrderTree {
+public class L102LevelOrderTree {
 
     /**
      * 二叉树的层序遍历
@@ -63,7 +63,7 @@ public class LevelOrderTree {
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
-        LevelOrderTree levelOrderTree = new LevelOrderTree();
+        L102LevelOrderTree levelOrderTree = new L102LevelOrderTree();
         levelOrderTree.levelOrder(root);
     }
 
