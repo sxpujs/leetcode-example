@@ -23,7 +23,7 @@ public class L912QuickSort {
         }
         int pivotIndex = partition(nums, left, right);
         sortArray(nums, left, pivotIndex - 1);
-        sortArray(nums, pivotIndex+1, right);
+        sortArray(nums, pivotIndex + 1, right);
     }
 
     /**
@@ -31,7 +31,7 @@ public class L912QuickSort {
      * 然后再进行划分。而主元的选取有很多种方式，这里我们采用随机的方式，
      * 对当前划分区间 [l,r] 里的数等概率随机一个作为我们的主元，再将主元放到区间末尾，进行划分。
      */
-    public int partition(int[]nums, int left, int right) {
+    public int partition(int[] nums, int left, int right) {
         int i = left - 1;
         Random random = new Random();
         int pivotIndex = random.nextInt(right - left + 1) + left;
@@ -39,15 +39,15 @@ public class L912QuickSort {
         int pivot = nums[right];
         for (int j = left; j < right; j++) {
             if (nums[j] <= pivot) {
-                i = i+1;
+                i = i + 1;
                 if (i != j) {
                     swap(nums, i, j);
                 }
 
             }
         }
-        swap(nums, i+1, right);
-        return i+1;
+        swap(nums, i + 1, right);
+        return i + 1;
     }
 
     public void swap(int[] nums, int i, int j) {
